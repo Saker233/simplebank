@@ -10,7 +10,6 @@ import (
 	_ "github.com/lib/pq"
 )
 
-
 func main() {
 
 	config, err := util.LoadConfig(".")
@@ -18,8 +17,6 @@ func main() {
 	if err != nil {
 		log.Fatal("Can not load config file:", err)
 	}
-
-
 
 	conn, err := sql.Open(config.DBDriver, config.DBSource)
 
